@@ -1,0 +1,13 @@
+install opencv 
+clone opencv_contrib from github 
+download res10_300x300_ssd_iter_140000.caffemodel and store it in \opencv\sources\samples\dnn\face_detector
+goto system envorimental variable --> Path --> edit path--> paste--> C:\Users\Lenovo\OneDrive\Desktop\OpenCV\opencv\build\x64\vc14\bin(change according to your file path)
+
+
+goto properties of your code file by right clicking on the main file 
+goto c/c++ -->additional Include Directories --> <edit> and paste the file path to opencv\build\include
+	   --> preprocessor --> Preprocessor Definition --> add _CRT_SECURE_NO_WARNINGS
+goto linkers --> General --> additional library Directories --> paste the path to opencv\build\x64\vc14\lib
+	     --> Input --> Additional Dependencies -->edit opencv_world453d.lib or opencv_world<version of opencv>d.lib 
+
+Rest make changes in code according to code <mainly changing path>
